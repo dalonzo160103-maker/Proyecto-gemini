@@ -1,0 +1,724 @@
+/* ============================================
+   Gestión de Préstamos - Styles
+   ============================================ */
+
+:root {
+    --color-success: #10B981;
+    --color-warning: #F59E0B;
+    --color-danger: #EF4444;
+    --color-info: #3B82F6;
+}
+
+/* Header */
+.prestamos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-md);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: var(--primary-navy);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--white);
+    color: var(--gray-700);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+/* KPIs */
+.kpis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.kpi-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.kpi-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.kpi-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.kpi-total {
+    background: linear-gradient(135deg, rgba(30, 86, 160, 0.1), rgba(30, 86, 160, 0.05));
+    color: var(--primary-blue);
+}
+
+.kpi-cobrar {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+    color: var(--color-success);
+}
+
+.kpi-vencidos {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05));
+    color: var(--color-danger);
+}
+
+.kpi-recuperado {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+    color: var(--color-info);
+}
+
+.kpi-content {
+    flex: 1;
+}
+
+.kpi-label {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    margin-bottom: 6px;
+}
+
+.kpi-value {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.75rem;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+}
+
+.kpi-meta {
+    font-size: 0.8125rem;
+    color: var(--gray-600);
+}
+
+/* Métodos de Pago Section */
+.metodos-pago-section {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    margin-bottom: 32px;
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-sm);
+}
+
+.metodos-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--gray-900);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.metodos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.metodo-card {
+    background: linear-gradient(135deg, var(--gray-50), var(--white));
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.metodo-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.metodo-efectivo {
+    border-color: #16A34A;
+}
+
+.metodo-efectivo:hover {
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.05), var(--white));
+}
+
+.metodo-yape {
+    border-color: #722F92;
+}
+
+.metodo-yape:hover {
+    background: linear-gradient(135deg, rgba(114, 47, 146, 0.05), var(--white));
+}
+
+.metodo-total {
+    border-color: var(--primary-blue);
+}
+
+.metodo-total:hover {
+    background: linear-gradient(135deg, rgba(30, 86, 160, 0.05), var(--white));
+}
+
+.metodo-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.metodo-efectivo .metodo-icon {
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.1), rgba(22, 163, 74, 0.05));
+    color: #16A34A;
+}
+
+.metodo-yape .metodo-icon {
+    background: linear-gradient(135deg, rgba(114, 47, 146, 0.1), rgba(114, 47, 146, 0.05));
+    color: #722F92;
+}
+
+.metodo-total .metodo-icon {
+    background: linear-gradient(135deg, rgba(30, 86, 160, 0.1), rgba(30, 86, 160, 0.05));
+    color: var(--primary-blue);
+}
+
+.metodo-content {
+    flex: 1;
+}
+
+.metodo-label {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.metodo-valor {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.875rem;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+}
+
+.metodo-meta {
+    font-size: 0.8125rem;
+    color: var(--gray-600);
+}
+
+/* Sectores Tabs */
+.sectores-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.sector-tab {
+    padding: 10px 20px;
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sector-tab:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.sector-tab.active {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.sector-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    padding: 0 6px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.sector-tab.active .sector-count {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Tabla de Préstamos */
+.prestamos-table-container {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.prestamos-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.prestamos-table thead {
+    background: linear-gradient(135deg, var(--gray-100), var(--gray-50));
+}
+
+.prestamos-table th {
+    padding: 16px 12px;
+    text-align: left;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.8125rem;
+    color: var(--gray-700);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.prestamos-table tbody tr {
+    border-bottom: 1px solid var(--gray-200);
+    transition: var(--transition);
+}
+
+.prestamos-table tbody tr:hover {
+    background: var(--gray-50);
+}
+
+.prestamos-table tbody tr.vencido {
+    background: rgba(239, 68, 68, 0.05);
+}
+
+.prestamos-table tbody tr.vencido:hover {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.prestamos-table td {
+    padding: 16px 12px;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+}
+
+.cliente-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.cliente-nombre {
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 2px;
+}
+
+.cliente-documento {
+    font-size: 0.75rem;
+    color: var(--gray-600);
+}
+
+.sector-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.sector-comercio { background: rgba(59, 130, 246, 0.1); color: #2563EB; }
+.sector-servicios { background: rgba(16, 185, 129, 0.1); color: #059669; }
+.sector-produccion { background: rgba(245, 158, 11, 0.1); color: #D97706; }
+.sector-otros { background: rgba(107, 114, 128, 0.1); color: #4B5563; }
+
+.monto {
+    font-family: var(--font-display);
+    font-weight: 700;
+}
+
+.estado-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.estado-activo {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-success);
+}
+
+.estado-vencido {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--color-danger);
+}
+
+.estado-finalizado {
+    background: rgba(107, 114, 128, 0.1);
+    color: var(--gray-600);
+}
+
+.estado-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.acciones-btns {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-pago {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-success);
+}
+
+.btn-pago:hover {
+    background: var(--color-success);
+    color: var(--white);
+}
+
+.btn-detalle {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--color-info);
+}
+
+.btn-detalle:hover {
+    background: var(--color-info);
+    color: var(--white);
+}
+
+.btn-eliminar {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--color-danger);
+}
+
+.btn-eliminar:hover {
+    background: var(--color-danger);
+    color: var(--white);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    position: relative;
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+.modal-large {
+    max-width: 800px;
+}
+
+.modal-header {
+    padding: 24px 32px;
+    border-bottom: 2px solid var(--gray-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--gray-900);
+}
+
+.modal-close {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: var(--gray-100);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    background: var(--gray-200);
+}
+
+.modal-body {
+    padding: 32px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+/* Form */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(30, 86, 160, 0.1);
+}
+
+.form-summary {
+    background: linear-gradient(135deg, var(--gray-50), var(--white));
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.form-summary h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--gray-900);
+    margin-bottom: 16px;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: var(--white);
+    border-radius: var(--radius-md);
+}
+
+.summary-item span {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+}
+
+.summary-item strong {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--gray-900);
+}
+
+.pago-info {
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.pago-info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.pago-info-item span {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+}
+
+.pago-info-item strong {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--gray-900);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .prestamos-header {
+        flex-direction: column;
+    }
+    
+    .header-actions {
+        width: 100%;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        flex: 1;
+    }
+    
+    .kpis-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .metodos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sectores-tabs {
+        flex-direction: column;
+    }
+    
+    .sector-tab {
+        width: 100%;
+    }
+    
+    .prestamos-table-container {
+        overflow-x: auto;
+    }
+    
+    .prestamos-table {
+        min-width: 1200px;
+    }
+    
+    .form-grid,
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        width: 95%;
+    }
+}

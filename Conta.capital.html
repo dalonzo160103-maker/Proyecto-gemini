@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CONTA.CAPITAL - Consultoría contable que transforma tus números en decisiones estratégicas">
+    <title>CONTA.CAPITAL | Consultoría Contable Empresarial</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#home" class="logo">
+                    <img src="assets/logo.png" alt="CONTA.CAPITAL" class="logo-img">
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="#planes" class="nav-link">Planes</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="escuela.capital.html" class="nav-link">Escuela</a></li>
+                    <li><a href="login.html" class="btn-nav btn-nav-login">Iniciar Sesión</a>
+                </ul>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Transformamos tus <span class="gradient-text">números</span> en decisiones estratégicas
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Consultoría contable especializada en tributación empresarial (IGV, Impuesto a la Renta), 
+                        análisis del impacto de las NIIF y contabilidad digital para empresas que buscan excelencia.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#contacto" class="btn btn-primary">
+                            <span>Hablemos de mi negocio</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                        <a href="#planes" class="btn btn-secondary">
+                            <span>Conocer Planes</span>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-value">50+</div>
+                            <div class="stat-label">Emprendedores Asesorados</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <div class="stat-value">98%</div>
+                            <div class="stat-label">Satisfacción Cliente</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <div class="stat-value">10+</div>
+                            <div class="stat-label">Años Experiencia</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                        <img src="assets/chanchito-Photoroom.png" alt="Contabilidad Digital" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients">
+        <div class="container">
+            <p class="clients-label">Empresas que confían en nosotros</p>
+        </div>
+        <div class="clients-track-wrapper">
+            <div class="clients-track" id="clientsTrack">
+                <!-- ✏️ Reemplaza el src con tu archivo PNG. Ej: assets/clients/empresa-abc.png -->
+                <div class="client-logo"><img src="assets/clients/cliente-1.png" alt="Cliente 1" onerror="this.parentElement.innerHTML='<span class=\'client-logo--placeholder\'>Logo</span>'"></div>
+                <div class="client-logo"><img src="assets/clients/cliente-2.png" alt="Cliente 2" onerror="this.parentElement.innerHTML='<span class=\'client-logo--placeholder\'>Logo</span>'"></div>
+                <div class="client-logo"><img src="assets/clients/cliente-3.png" alt="Cliente 3" onerror="this.parentElement.innerHTML='<span class=\'client-logo--placeholder\'>Logo</span>'"></div>
+                <div class="client-logo"><img src="assets/clients/cliente-4.png" alt="Cliente 4" onerror="this.parentElement.innerHTML='<span class=\'client-logo--placeholder\'>Logo</span>'"></div>
+                <div class="client-logo"><img src="assets/clients/cliente-5.png" alt="Cliente 5" onerror="this.parentElement.innerHTML='<span class=\'client-logo--placeholder\'>Logo</span>'"></div>
+                <div class="client-logo"><img src="assets/clients/cliente-6.png" alt="Cliente 6" onerror="this.parentElement.innerHTML='<span class=\'client-logo--placeholder\'>Logo</span>'"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestros Servicios</span>
+                <h2 class="section-title">Soluciones que impulsan tu crecimiento</h2>
+                <p class="section-desc">Servicios contables diseñados para optimizar tus finanzas y tomar decisiones inteligentes</p>
+            </div>
+            
+            <div class="services-grid" id="servicesGrid">
+                <!-- Services loaded dynamically from data.json -->
+            </div>
+            
+            <div class="services-footer">
+                <div class="services-disclaimer">
+                    <div class="disclaimer-icon">💡</div>
+                    <p class="disclaimer-text">
+                        <strong>No hacemos magia ni prometemos que te harás millonario mañana.</strong> Lo que hacemos es darte el orden contable y la imagen profesional que necesitas para que tu esfuerzo rinda frutos sin que la informalidad te detenga.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section -->
+    <section class="team" id="nosotros">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestro Equipo</span>
+                <h2 class="section-title">Profesionales que entienden tu negocio</h2>
+                <p class="section-desc">Un equipo multidisciplinario de expertos comprometidos con el éxito de tu empresa</p>
+            </div>
+            
+            <div class="team-grid" id="teamGrid">
+                <!-- Team members loaded dynamically from data.json -->
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Plans Section -->
+    <section class="pricing" id="planes">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Planes de Inversión</span>
+                <h2 class="section-title">Invierte en tu tranquilidad financiera</h2>
+                <p class="section-desc">Elige el plan que mejor se adapte a las necesidades de tu empresa</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Plan Básico -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Básico</h3>
+                        <p class="plan-desc">Para empresas que inician</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">S/</span>
+                        <span class="amount">200</span>
+                        <span class="period">/mes</span>
+                    </div>
+                    <div class="pricing-value">
+                        <div class="value-tag">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Ahorra hasta S/3,200/año en multas</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Declaraciones mensuales (IGV, Renta)</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Libros electrónicos</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Revisión tributaria mensual</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Soporte vía email</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Estados financieros trimestrales</span>
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="btn-plan">Empezar Ahora</a>
+                </div>
+
+                <!-- Plan Profesional (Popular) -->
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Más Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Profesional</h3>
+                        <p class="plan-desc">Para empresas en crecimiento</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">S/</span>
+                        <span class="amount">550</span>
+                        <span class="period">/mes</span>
+                    </div>
+                    <div class="pricing-value">
+                        <div class="value-tag featured">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>ROI promedio: 380% en ahorro fiscal</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span><strong>Todo del Plan Básico +</strong></span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Planificación tributaria anual</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Análisis de impacto NIIF</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Dashboard financiero digital</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Contador asignado dedicado</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Soporte prioritario WhatsApp</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Reportes mensuales ejecutivos</span>
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="btn-plan featured">Comenzar Ahora</a>
+                </div>
+
+                <!-- Plan Empresarial -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="plan-name">Empresarial</h3>
+                        <p class="plan-desc">Para empresas consolidadas</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">S/</span>
+                        <span class="amount">1,000</span>
+                        <span class="period">/mes</span>
+                    </div>
+                    <div class="pricing-value">
+                        <div class="value-tag">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Inversión estratégica con CFO virtual</span>
+                        </div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span><strong>Todo del Plan Profesional +</strong></span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>CFO Virtual (4h/mes)</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Auditoría interna semestral</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Proyecciones financieras</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Due diligence para inversiones</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Soporte 24/7 vía WhatsApp</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Reuniones estratégicas mensuales</span>
+                        </li>
+                    </ul>
+                    <a href="#contacto" class="btn-plan">Agendar Demo</a>
+                </div>
+            </div>
+
+            <div class="pricing-note">
+                <p>💡 <strong>¿Necesitas un plan personalizado?</strong> Contáctanos para crear una solución a medida para tu empresa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contacto Section -->
+    <section class="cta" id="contacto">
+        <div class="container">
+            <div class="cta-layout">
+
+                <!-- Columna izquierda: texto y confianza -->
+                <div class="cta-left">
+                    <span class="cta-eyebrow">Consultoría Gratuita</span>
+                    <h2 class="cta-title">¿Listo para transformar tus finanzas?</h2>
+                    <p class="cta-text">Cuéntanos tu situación y te contactamos con una solución concreta, sin rodeos.</p>
+
+                    <ul class="cta-trust">
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Sin compromiso de contratación
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Respondemos en menos de 24 horas
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            100% confidencial
+                        </li>
+                    </ul>
+
+                    <a href="tel:+51987654321" class="cta-phone">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        +51 987 654 321
+                    </a>
+                </div>
+
+                <!-- Columna derecha: formulario -->
+                <div class="cta-form-card">
+
+                    <!-- Indicador de pasos -->
+                    <div class="form-steps">
+                        <div class="form-step form-step--active" id="stepDot1">
+                            <span>1</span>
+                        </div>
+                        <div class="form-step-line"></div>
+                        <div class="form-step" id="stepDot2">
+                            <span>2</span>
+                        </div>
+                    </div>
+
+                    <!-- PASO 1: Diagnóstico -->
+                    <div class="form-panel" id="formStep1">
+                        <h3 class="form-panel-title">¿Cuál es tu principal desafío hoy?</h3>
+                        <p class="form-panel-sub">Selecciona el que más se acerque a tu situación.</p>
+
+                        <div class="challenge-grid">
+                            <label class="challenge-card">
+                                <input type="radio" name="challenge" value="Tributación y declaraciones (IGV, Renta, multas)">
+                                <span class="challenge-icon">📊</span>
+                                <span class="challenge-label">Tributación y declaraciones</span>
+                            </label>
+                            <label class="challenge-card">
+                                <input type="radio" name="challenge" value="Aplicación de NIIF en mi empresa">
+                                <span class="challenge-icon">📋</span>
+                                <span class="challenge-label">Impacto de las NIIF</span>
+                            </label>
+                            <label class="challenge-card">
+                                <input type="radio" name="challenge" value="Digitalizar mi contabilidad">
+                                <span class="challenge-icon">💻</span>
+                                <span class="challenge-label">Contabilidad digital</span>
+                            </label>
+                            <label class="challenge-card">
+                                <input type="radio" name="challenge" value="Ordenar mis finanzas desde cero">
+                                <span class="challenge-icon">🧾</span>
+                                <span class="challenge-label">Ordenar mis finanzas</span>
+                            </label>
+                            <label class="challenge-card challenge-card--wide" id="cardNoSure">
+                                <input type="radio" name="challenge" value="No estoy seguro — necesito orientación">
+                                <span class="challenge-icon">🤔</span>
+                                <span class="challenge-label">No estoy seguro, necesito orientación</span>
+                            </label>
+                        </div>
+
+                        <!-- Textarea condicional -->
+                        <div class="detail-box" id="detailBox">
+                            <label class="detail-label">Cuéntanos tu situación con más detalle</label>
+                            <textarea id="detailText" class="detail-textarea" placeholder="Ej: Tengo una empresa de 2 años, nunca hemos llevado contabilidad formal y ya nos llegó una notificación de Sunat..." rows="4" maxlength="500"></textarea>
+                            <span class="detail-count"><span id="charCount">0</span>/500</span>
+                        </div>
+
+                        <button class="btn-form-next" id="btnStep1Next" disabled>
+                            Continuar
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+
+                    <!-- PASO 2: Datos de contacto -->
+                    <div class="form-panel form-panel--hidden" id="formStep2">
+                        <button class="btn-back" id="btnBack">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                            Volver
+                        </button>
+
+                        <h3 class="form-panel-title">Un último paso</h3>
+                        <p class="form-panel-sub">¿A dónde te enviamos la respuesta?</p>
+
+                        <!-- Resumen del problema seleccionado -->
+                        <div class="selected-challenge" id="selectedChallenge"></div>
+
+                        <div class="form-fields">
+                            <div class="form-field">
+                                <label for="contactName">Tu nombre</label>
+                                <input type="text" id="contactName" placeholder="Ej: María García" maxlength="60" autocomplete="name">
+                            </div>
+                            <div class="form-field">
+                                <label for="contactPhone">Tu WhatsApp</label>
+                                <div class="phone-input-wrapper">
+                                    <span class="phone-prefix">+51</span>
+                                    <input type="tel" id="contactPhone" placeholder="987 654 321" maxlength="12" autocomplete="tel">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-form-submit" id="btnSubmit">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            Agendar Consultoría Gratuita
+                        </button>
+                        <p class="form-disclaimer">Te abriremos WhatsApp con tu información. Respondemos en &lt;24h.</p>
+                    </div>
+
+                    <!-- CONFIRMACIÓN -->
+                    <div class="form-panel form-panel--hidden" id="formDone">
+                        <div class="form-done-icon">✅</div>
+                        <h3 class="form-panel-title">¡Mensaje enviado!</h3>
+                        <p class="form-panel-sub">Ya recibimos tu caso. Estamos leyendo tu situación y te contactaremos pronto con una solución concreta.</p>
+                        <p class="form-done-note">Si WhatsApp no se abrió automáticamente, escríbenos a <strong>+51 987 654 321</strong></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <img src="assets/PNG MONEDAS_LOGO DANIEL.png" alt="CONTA.CAPITAL" class="footer-logo">
+                    <p class="footer-text">Consultoría contable especializada en tributación empresarial y contabilidad digital.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="#servicios">Tributación Empresarial</a></li>
+                        <li><a href="#servicios">Impacto NIIF</a></li>
+                        <li><a href="#servicios">Contabilidad Digital</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#planes">Planes</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-title">Contacto</h4>
+                    <ul class="footer-contact">
+                        <li>Lima, Perú</li>
+                        <li>contacto@conta.capital</li>
+                        <li>+51 987 654 321</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 CONTA.CAPITAL. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        // ── Marquee: duplica logos para loop infinito ──────────────────
+        (function () {
+            var track = document.getElementById('clientsTrack');
+            if (!track) return;
+            track.insertAdjacentHTML('beforeend', track.innerHTML);
+        })();
+
+        // ── Formulario de contacto ──────────────────────────────────────
+        (function () {
+            var step1    = document.getElementById('formStep1');
+            var step2    = document.getElementById('formStep2');
+            var done     = document.getElementById('formDone');
+            var dot1     = document.getElementById('stepDot1');
+            var dot2     = document.getElementById('stepDot2');
+            var btnNext  = document.getElementById('btnStep1Next');
+            var btnBack  = document.getElementById('btnBack');
+            var btnSub   = document.getElementById('btnSubmit');
+            var detailBox= document.getElementById('detailBox');
+            var detailTxt= document.getElementById('detailText');
+            var charCount= document.getElementById('charCount');
+            var selLabel = document.getElementById('selectedChallenge');
+            var radios   = document.querySelectorAll('input[name="challenge"]');
+
+            // Habilitar "Continuar" al elegir opción
+            radios.forEach(function(r) {
+                r.addEventListener('change', function() {
+                    btnNext.disabled = false;
+                    var isUnsure = r.value.startsWith('No estoy seguro');
+                    detailBox.classList.toggle('detail-box--visible', isUnsure);
+                });
+            });
+
+            // Contador de caracteres
+            detailTxt.addEventListener('input', function() {
+                charCount.textContent = detailTxt.value.length;
+            });
+
+            // Paso 1 → Paso 2
+            btnNext.addEventListener('click', function() {
+                var chosen = document.querySelector('input[name="challenge"]:checked');
+                if (!chosen) return;
+                selLabel.innerHTML =
+                    '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>' +
+                    '<span>' + chosen.value + '</span>';
+
+                step1.classList.add('form-panel--hidden');
+                step2.classList.remove('form-panel--hidden');
+                dot1.classList.remove('form-step--active');
+                dot2.classList.add('form-step--active');
+            });
+
+            // Paso 2 → Paso 1
+            btnBack.addEventListener('click', function() {
+                step2.classList.add('form-panel--hidden');
+                step1.classList.remove('form-panel--hidden');
+                dot2.classList.remove('form-step--active');
+                dot1.classList.add('form-step--active');
+            });
+
+            // Enviar → WhatsApp
+            btnSub.addEventListener('click', function() {
+                var name  = document.getElementById('contactName').value.trim();
+                var phone = document.getElementById('contactPhone').value.trim();
+                var challenge = document.querySelector('input[name="challenge"]:checked');
+                var detail = detailTxt.value.trim();
+
+                if (!name || !phone) {
+                    if (!name) document.getElementById('contactName').classList.add('field-error');
+                    if (!phone) document.getElementById('contactPhone').classList.add('field-error');
+                    return;
+                }
+
+                var msg =
+                    'Hola, CONTA.CAPITAL 👋\n\n' +
+                    '*Nombre:* ' + name + '\n' +
+                    '*WhatsApp:* +51 ' + phone + '\n\n' +
+                    '*Mi principal desafío:*\n' + (challenge ? challenge.value : 'No especificado') + '\n';
+
+                if (detail) msg += '\n*Más detalles:*\n' + detail + '\n';
+                msg += '\n¡Me gustaría agendar mi consultoría gratuita! 📅';
+
+                var url = 'https://wa.me/51987654321?text=' + encodeURIComponent(msg);
+                window.open(url, '_blank');
+
+                step2.classList.add('form-panel--hidden');
+                done.classList.remove('form-panel--hidden');
+                dot2.classList.remove('form-step--active');
+                dot2.classList.add('form-step--done');
+            });
+
+            // Quitar error al escribir
+            ['contactName','contactPhone'].forEach(function(id) {
+                document.getElementById(id).addEventListener('input', function() {
+                    this.classList.remove('field-error');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

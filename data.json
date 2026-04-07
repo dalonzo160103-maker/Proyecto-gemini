@@ -1,0 +1,138 @@
+{
+  "services": [
+    {
+      "id": "tributacion-empresarial",
+      "title": "Cero paltas con la Sunat.",
+      "icon": "💼",
+      "description": "Sabemos que una notificación de la SUNAT puede arruinar tu semana. Por eso, no hacemos magia: realizamos un trabajo técnico impecable para que duermas tranquilo, pagues lo justo y cumplas con la ley sin estrés.",
+      "features": [
+        "Paga lo justo, ni un sol más: Calculamos tu IGV y Renta con honestidad, aplicando cada beneficio legal a tu favor para que no regales tu liquidez.",
+        "Tu buzón SUNAT duerme con nosotros: Monitoreamos tus notificaciones diariamente; si la SUNAT toca la puerta, nosotros respondemos.",
+        "Declaraciones limpias, sin parches: Presentamos tus libros a tiempo y sin errores, eliminando para siempre las multas por rectificatorias."
+      ],
+      "link": "#contacto"
+    },
+    {
+      "id": "Outsourcing contable",
+      "title": "Ordenamos la Casa (y tus números)",
+      "icon": "📊",
+      "description": "Ideal para el dueño de negocio que siente que el papeleo lo está ahogando y ya no sabe si está ganando dinero o perdiéndolo. Nosotros tomamos el control administrativo y contable para que tú recuperes tu tiempo y puedas enfocarte en lo que mejor sabes hacer: hacer crecer tu empresa.",
+      "features": [
+        "Implementación completa de NIIF y NIIF para PYMES",
+        "Análisis de impacto en estados financieros y ratios",
+        "Conversión de contabilidad tributaria a NIIF",
+        "Capacitación especializada para equipos contables",
+        "Auditoría de cumplimiento y reporte internacional"
+      ],
+      "link": "#contacto"
+    },
+    {
+      "id": "contabilidad-hard",
+      "title": "Una pinta que jala clientes",
+      "icon": "💻",
+      "description": "Tener un buen producto no es suficiente si tu marca se ve improvisada. Combinamos diseño profesional y tecnología web para darle a tu negocio la fachada que necesita para generar confianza y atraer clientes que realmente valoren tu trabajo.",
+      "features": [
+        "Plataforma cloud con acceso 24/7 desde cualquier dispositivo",
+        "Automatización de procesos contables (ahorro de 15 horas/mes)",
+        "Dashboards financieros interactivos en tiempo real",
+        "Integración con sistemas ERP y facturación electrónica",
+        "Reportes ejecutivos personalizados con insights de negocio"
+      ],
+      "link": "#contacto"
+    }
+  ],
+  "team": [
+    {
+      "id": "luis-contador",
+      "name": "Luis Saavedra",
+      "role": "Contador General",
+      "specialization": "Especialista en Tributación Empresarial",
+      "experience": "+15 años",
+      "bio": "Experto en estrategias tributarias que han ayudado a más de 200 emprendedores a optimizar su carga fiscal. Certificado en NIIF y Derecho Tributario.",
+      "expertise": [
+        "Planificación fiscal estratégica",
+        "Representación ante SUNAT",
+        "Auditorías tributarias"
+      ],
+      "badge": "Líder del Equipo",
+      "linkedin": "#",
+      "email": "luis@conta.capital"
+    },
+    {
+      "id": "diego-asistente",
+      "name": "Diego Saavedra",
+      "role": "Asistente Contable",
+      "specialization": "Operaciones y Soporte Empresarial",
+      "experience": "+5 años",
+      "bio": "Profesional dedicado a garantizar que tu operación contable funcione sin fricciones. Resuelve tus dudas y mantiene tus registros impecables.",
+      "expertise": [
+        "Gestión operativa diaria",
+        "Registro de comprobantes",
+        "Soporte a clientes"
+      ],
+      "badge": null,
+      "linkedin": "#",
+      "email": "diego@conta.capital"
+    },
+    {
+      "id": "daniel-asistente",
+      "name": "Daniel Garcia",
+      "role": "Asistente Contable & BI Analyst",
+      "specialization": "Declaraciones y Business Intelligence",
+      "experience": "+4 años",
+      "bio": "Combina conocimiento contable con análisis de datos. Presenta tus declaraciones a tiempo y crea dashboards que hacen visibles los números de tu negocio.",
+      "expertise": [
+        "Declaraciones tributarias",
+        "Dashboards financieros",
+        "Análisis de datos"
+      ],
+      "badge": null,
+      "linkedin": "#",
+      "email": "daniel@conta.capital"
+    },
+    {
+      "id": "antony-dev",
+      "name": "Anthony Vilcatoma",
+      "role": "Software Developer",
+      "specialization": "Digitalización y Automatización",
+      "experience": "+2 años",
+      "bio": "Desarrolla soluciones tecnológicas que automatizan procesos contables y dan visibilidad en tiempo real a tu negocio. Experto en integraciones.",
+      "expertise": [
+        "Automatización de procesos",
+        "Integraciones API",
+        "Desarrollo cloud"
+      ],
+      "badge": "Tech Lead",
+      "linkedin": "#",
+      "email": "antony@conta.capital"
+    },
+    {
+      "id": "jamin-designer",
+      "name": "Jamin Aquino",
+      "role": "Lead Designer",
+      "specialization": "UX/UI y Brand Strategy",
+      "experience": "+3 años",
+      "bio": "Diseña experiencias visuales que hacen que tu negocio se vea profesional y genere confianza. Experto en branding para fintech y servicios.",
+      "expertise": [
+        "Diseño de interfaces",
+        "Branding empresarial",
+        "Comunicación visual"
+      ],
+      "badge": "Creative Director",
+      "linkedin": "#",
+      "email": "jamin@conta.capital"
+    }
+  ],
+  "metadata": {
+    "version": "2.0",
+    "lastUpdated": "2026-02-14",
+    "company": "CONTA.CAPITAL",
+    "features": [
+      "Dynamic CMS",
+      "Team Management",
+      "Pricing Plans",
+      "Mobile Responsive",
+      "Modern Design"
+    ]
+  }
+}

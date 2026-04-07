@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes Financieros | CONTA.CAPITAL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/reportes.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="assets/logo.png" alt="CONTA.CAPITAL" class="sidebar-logo">
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                </svg>
+                <span>Dashboard</span>
+            </a>
+            <a href="#" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                </svg>
+                <span>Declaraciones</span>
+            </a>
+            <a href="reportes.html" class="nav-item active">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+                <span>Reportes</span>
+            </a>
+            <a href="#" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="8.5" cy="7" r="4"/>
+                    <path d="M20 8v6M23 11h-6"/>
+                </svg>
+                <span>Mi Contador</span>
+            </a>
+            <a href="#" class="nav-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 1v6m0 6v6M5.6 5.6l4.2 4.2m4.2 4.2l4.2 4.2M1 12h6m6 0h6M5.6 18.4l4.2-4.2m4.2-4.2l4.2-4.2"/>
+                </svg>
+                <span>Configuración</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <button class="btn-logout" id="btnLogout">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                    <polyline points="16 17 21 12 16 7"/>
+                    <line x1="21" y1="12" x2="9" y2="12"/>
+                </svg>
+                <span>Cerrar Sesión</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <!-- Header -->
+        <header class="reports-header">
+            <div class="header-left">
+                <h1 class="page-title">Reportes Financieros</h1>
+                <p class="page-subtitle">Estados financieros bajo NIIF 18</p>
+            </div>
+            <div class="header-actions">
+                <div class="period-selector">
+                    <button class="period-btn" data-period="month">Mensual</button>
+                    <button class="period-btn active" data-period="quarter">Trimestral</button>
+                    <button class="period-btn" data-period="year">Anual</button>
+                </div>
+                <select class="year-selector">
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                </select>
+                <button class="btn-export">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Exportar PDF
+                </button>
+            </div>
+        </header>
+
+        <!-- Quick Metrics -->
+        <div class="quick-metrics">
+            <div class="metric-card">
+                <div class="metric-icon metric-assets">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    </svg>
+                </div>
+                <div class="metric-content">
+                    <div class="metric-label">Total Activos</div>
+                    <div class="metric-value">S/ 2,458,320</div>
+                    <div class="metric-change positive">+8.2% vs trim. anterior</div>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon metric-liabilities">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                </div>
+                <div class="metric-content">
+                    <div class="metric-label">Total Pasivos</div>
+                    <div class="metric-value">S/ 1,245,180</div>
+                    <div class="metric-change neutral">+2.1% vs trim. anterior</div>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon metric-equity">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                    </svg>
+                </div>
+                <div class="metric-content">
+                    <div class="metric-label">Patrimonio</div>
+                    <div class="metric-value">S/ 1,213,140</div>
+                    <div class="metric-change positive">+15.3% vs trim. anterior</div>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon metric-profit">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                        <polyline points="17 6 23 6 23 12"/>
+                    </svg>
+                </div>
+                <div class="metric-content">
+                    <div class="metric-label">Utilidad del Periodo</div>
+                    <div class="metric-value">S/ 187,420</div>
+                    <div class="metric-change positive">+22.8% vs trim. anterior</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="report-tabs">
+            <button class="tab-btn active" data-tab="situacion">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"/>
+                    <rect x="14" y="3" width="7" height="7"/>
+                    <rect x="14" y="14" width="7" height="7"/>
+                    <rect x="3" y="14" width="7" height="7"/>
+                </svg>
+                Estado de Situación Financiera
+            </button>
+            <button class="tab-btn" data-tab="resultados">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="1" x2="12" y2="23"/>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                </svg>
+                Estado de Resultados
+            </button>
+        </div>
+
+        <!-- Estado de Situación Financiera -->
+        <div class="report-content active" id="situacion">
+            <div class="report-card">
+                <div class="report-card-header">
+                    <h2 class="report-title">Estado de Situación Financiera</h2>
+                    <div class="report-meta">
+                        <span class="report-date">Al 31 de Diciembre de 2026</span>
+                        <span class="report-standard">NIIF 18</span>
+                    </div>
+                </div>
+
+                <div class="financial-statement">
+                    <!-- ACTIVOS -->
+                    <div class="statement-section">
+                        <div class="section-header section-header-activos">
+                            <h3>ACTIVOS</h3>
+                            <div class="section-total">S/ 2,458,320</div>
+                        </div>
+
+                        <!-- Activos Corrientes -->
+                        <div class="subsection">
+                            <div class="subsection-header">
+                                <h4>Activos Corrientes</h4>
+                                <button class="toggle-btn" data-toggle="activos-corrientes">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="subsection-content" id="activos-corrientes">
+                                <div class="line-item">
+                                    <span class="item-label">Efectivo y Equivalentes de Efectivo</span>
+                                    <span class="item-value">S/ 458,230</span>
+                                </div>
+                                <div class="line-item">
+                                    <span class="item-label">Cuentas por Cobrar Comerciales</span>
+                                    <span class="item-value">S/ 324,150</span>
+                                </div>
+                                <div class="line-item">
+                                    <span class="item-label">Otras Cuentas por Cobrar</span>
+                                    <span class="item-value">S/ 87,420</span>
+                                </div>
+                                <div class="line-item">
+                                    <span class="item-label">Inventarios</span>
+                                    <span class="item-value">S/ 542,180</span>
+                                </div>
+                                <div class="line-item">
+                                    <span class="item-label">Gastos Pagados por Anticipado</span>
+                                    <span class="item-value">S/ 34,560</span>
+                                </div>
+                                <div class="line-item subtotal">
+                                    <span class="item-label">Total Activos Corrientes</span>
+                                    <span class="item-value">S/ 1,446,540</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activos No Corrientes -->
+                        <div class="subsection">
+                            <div class="subsection-header">
+                                <h4>Activos No Corrientes</h4>
+                                <button class="toggle-btn" data-toggle="activos-no-corrientes">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="subsection-content" id="activos-no-corrientes">
+                                <div class="line-item">
+                                    <span class="item-label">Propiedad, Planta y Equipo</span>
+                                    <span class="item-value">S/ 824,650</span>
+                                </div>
+                                <div class="line-item">
+                                    <span class="item-label">Activos Intangibles</span>
+                                    <span class="item-value">S/ 145,230</span>
+                                </div>
+                                <div class="line-item">
+                                    <span class="item-label">Inversiones a Largo Plazo</span>
+                                    <span class="item-value">S/ 41,900</span>
+                                </div>
+                                <div class="line-item subtotal">
+                                    <span class="item-label">Total Activos No Corrientes</span>
+                                    <span class="item-value">S/ 1,011,780</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PASIVOS Y PATRIMONIO -->
+                    <div class="statement-section">
+                        <div class="section-header section-header-pasivos">
+                            <h3>PASIVOS Y PATRIMONIO</h3>
+                            <div class="section-total">S/ 2,458,320</div>
+                        </div>
+
+                        <!-- Pasivos Corrientes -->
+                        <div class="subsection">
+                            <div class="subsection-header">
+                                <h4>Pasivos Corrientes</h4>
+                                <button class="toggle-btn" data-toggle="pasivos-corrientes">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="subsection-content" id="pasivos-corrientes">
+                                <div class="line-item">
+                                    <span class="item-label">Cuentas por Pagar Comerciales</span>
+                                    <span class="item-value">S/ 287,450</span>
+                                </div>
+                                <div class="line-item">
+                                    <span class="item-label">Otras Cuentas por Pagar</span>
+                                    <span class="item-value">S/ 124,320</span>
+                                </div>
+                                <div class="line-item">
+                                    <span class="item-label">Obligaciones Financieras CP</span>
+                                    <span class="item-value">S/ 156,780</span>
+                                </div>
+                                <div class="line-item">
+                                    <span class="item-label">Provisiones</span>
+                                    <span class="item-value">S/ 89,560</span>
+                                </div>
+                                <div class="line-item subtotal">
+                                    <span class="item-label">Total Pasivos Corrientes</span>
+                                    <span class="item-value">S/ 658,110</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pasivos No Corrientes -->
+                        <div class="subsection">
+                            <div class="subsection-header">
+                                <h4>Pasivos No Corrientes</h4>
+                                <button class="toggle-btn" data-toggle="pasivos-no-corrientes">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="subsection-content" id="pasivos-no-corrientes">
+                                <div class="line-item">
+                                    <span class="item-label">Obligaciones Financieras LP</span>
+                                    <span class="item-value">S/ 487,320</span>
+                                </div>
+                                <div class="line-item">
+                                    <span class="item-label">Pasivos por Impuestos Diferidos</span>
+                                    <span class="item-value">S/ 99,750</span>
+                                </div>
+                                <div class="line-item subtotal">
+                                    <span class="item-label">Total Pasivos No Corrientes</span>
+                                    <span class="item-value">S/ 587,070</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="line-item total-section">
+                            <span class="item-label">TOTAL PASIVOS</span>
+                            <span class="item-value">S/ 1,245,180</span>
+                        </div>
+
+                        <!-- Patrimonio -->
+                        <div class="subsection">
+                            <div class="subsection-header">
+                                <h4>Patrimonio</h4>
+                                <button class="toggle-btn" data-toggle="patrimonio">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="subsection-content" id="patrimonio">
+                                <div class="line-item">
+                                    <span class="item-label">Capital Social</span>
+                                    <span class="item-value">S/ 800,000</span>
+                                </div>
+                                <div class="line-item">
+                                    <span class="item-label">Reserva Legal</span>
+                                    <span class="item-value">S/ 138,300</span>
+                                </div>
+                                <div class="line-item">
+                                    <span class="item-label">Resultados Acumulados</span>
+                                    <span class="item-value">S/ 87,420</span>
+                                </div>
+                                <div class="line-item">
+                                    <span class="item-label">Resultado del Ejercicio</span>
+                                    <span class="item-value">S/ 187,420</span>
+                                </div>
+                                <div class="line-item subtotal">
+                                    <span class="item-label">Total Patrimonio</span>
+                                    <span class="item-value">S/ 1,213,140</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="line-item total-section final-total">
+                            <span class="item-label">TOTAL PASIVOS Y PATRIMONIO</span>
+                            <span class="item-value">S/ 2,458,320</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visualization -->
+                <div class="statement-visualization">
+                    <h3 class="viz-title">Composición del Balance</h3>
+                    <div class="balance-chart">
+                        <div class="chart-bar">
+                            <div class="bar-segment bar-activos-corrientes" style="height: 59%;">
+                                <span class="bar-label">Activos Corrientes<br>59%</span>
+                            </div>
+                            <div class="bar-segment bar-activos-no-corrientes" style="height: 41%;">
+                                <span class="bar-label">Activos No Corrientes<br>41%</span>
+                            </div>
+                            <div class="bar-title">ACTIVOS</div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="bar-segment bar-pasivos-corrientes" style="height: 27%;">
+                                <span class="bar-label">Pasivos Corrientes<br>27%</span>
+                            </div>
+                            <div class="bar-segment bar-pasivos-no-corrientes" style="height: 24%;">
+                                <span class="bar-label">Pasivos No Corrientes<br>24%</span>
+                            </div>
+                            <div class="bar-segment bar-patrimonio" style="height: 49%;">
+                                <span class="bar-label">Patrimonio<br>49%</span>
+                            </div>
+                            <div class="bar-title">PASIVOS Y PATRIMONIO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estado de Resultados -->
+        <div class="report-content" id="resultados">
+            <div class="report-card">
+                <div class="report-card-header">
+                    <h2 class="report-title">Estado de Resultados Integral</h2>
+                    <div class="report-meta">
+                        <span class="report-date">Por el periodo terminado al 31 de Diciembre de 2026</span>
+                        <span class="report-standard">NIIF 18</span>
+                    </div>
+                </div>
+
+                <div class="financial-statement">
+                    <!-- Ingresos -->
+                    <div class="statement-section">
+                        <div class="line-item section-main">
+                            <span class="item-label">Ingresos por Actividades Ordinarias</span>
+                            <span class="item-value">S/ 3,458,920</span>
+                        </div>
+                        <div class="line-item">
+                            <span class="item-label">Costo de Ventas</span>
+                            <span class="item-value negative">(S/ 1,847,560)</span>
+                        </div>
+                        <div class="line-item total-section">
+                            <span class="item-label">Ganancia Bruta</span>
+                            <span class="item-value">S/ 1,611,360</span>
+                        </div>
+                    </div>
+
+                    <!-- Gastos Operativos -->
+                    <div class="statement-section">
+                        <div class="subsection">
+                            <div class="subsection-header">
+                                <h4>Gastos de Operación</h4>
+                                <button class="toggle-btn" data-toggle="gastos-operacion">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="subsection-content" id="gastos-operacion">
+                                <div class="line-item">
+                                    <span class="item-label">Gastos de Administración</span>
+                                    <span class="item-value negative">(S/ 524,780)</span>
+                                </div>
+                                <div class="line-item">
+                                    <span class="item-label">Gastos de Ventas</span>
+                                    <span class="item-value negative">(S/ 387,450)</span>
+                                </div>
+                                <div class="line-item">
+                                    <span class="item-label">Otros Gastos Operativos</span>
+                                    <span class="item-value negative">(S/ 124,320)</span>
+                                </div>
+                                <div class="line-item subtotal">
+                                    <span class="item-label">Total Gastos de Operación</span>
+                                    <span class="item-value negative">(S/ 1,036,550)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="line-item total-section">
+                            <span class="item-label">Ganancia por Actividades de Operación</span>
+                            <span class="item-value">S/ 574,810</span>
+                        </div>
+                    </div>
+
+                    <!-- Ingresos y Gastos Financieros -->
+                    <div class="statement-section">
+                        <div class="line-item">
+                            <span class="item-label">Ingresos Financieros</span>
+                            <span class="item-value">S/ 24,350</span>
+                        </div>
+                        <div class="line-item">
+                            <span class="item-label">Gastos Financieros</span>
+                            <span class="item-value negative">(S/ 87,420)</span>
+                        </div>
+                        <div class="line-item">
+                            <span class="item-label">Diferencia de Cambio Neta</span>
+                            <span class="item-value negative">(S/ 12,450)</span>
+                        </div>
+
+                        <div class="line-item total-section">
+                            <span class="item-label">Ganancia antes de Impuesto a la Renta</span>
+                            <span class="item-value">S/ 499,290</span>
+                        </div>
+                    </div>
+
+                    <!-- Impuesto a la Renta -->
+                    <div class="statement-section">
+                        <div class="line-item">
+                            <span class="item-label">Impuesto a la Renta</span>
+                            <span class="item-value negative">(S/ 147,430)</span>
+                        </div>
+                        <div class="line-item">
+                            <span class="item-label">Impuesto a la Renta Diferido</span>
+                            <span class="item-value negative">(S/ 37,440)</span>
+                        </div>
+
+                        <div class="line-item total-section final-total">
+                            <span class="item-label">Ganancia Neta del Periodo</span>
+                            <span class="item-value profit">S/ 314,420</span>
+                        </div>
+                    </div>
+
+                    <!-- Ratios -->
+                    <div class="ratios-section">
+                        <h3 class="ratios-title">Indicadores Financieros</h3>
+                        <div class="ratios-grid">
+                            <div class="ratio-card">
+                                <div class="ratio-label">Margen Bruto</div>
+                                <div class="ratio-value">46.6%</div>
+                            </div>
+                            <div class="ratio-card">
+                                <div class="ratio-label">Margen Operativo</div>
+                                <div class="ratio-value">16.6%</div>
+                            </div>
+                            <div class="ratio-card">
+                                <div class="ratio-label">Margen Neto</div>
+                                <div class="ratio-value">9.1%</div>
+                            </div>
+                            <div class="ratio-card">
+                                <div class="ratio-label">EBITDA</div>
+                                <div class="ratio-value">S/ 687,230</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profit Visualization -->
+                <div class="statement-visualization">
+                    <h3 class="viz-title">Distribución de Resultados</h3>
+                    <div class="waterfall-chart">
+                        <div class="waterfall-item" style="height: 100%;">
+                            <div class="waterfall-bar bar-positive">
+                                <span class="waterfall-value">S/ 3,458,920</span>
+                            </div>
+                            <span class="waterfall-label">Ingresos</span>
+                        </div>
+                        <div class="waterfall-connector"></div>
+                        <div class="waterfall-item" style="height: 53.4%;">
+                            <div class="waterfall-bar bar-negative">
+                                <span class="waterfall-value">-S/ 1,847,560</span>
+                            </div>
+                            <span class="waterfall-label">Costo de Ventas</span>
+                        </div>
+                        <div class="waterfall-connector"></div>
+                        <div class="waterfall-item" style="height: 46.6%;">
+                            <div class="waterfall-bar bar-neutral">
+                                <span class="waterfall-value">S/ 1,611,360</span>
+                            </div>
+                            <span class="waterfall-label">Ganancia Bruta</span>
+                        </div>
+                        <div class="waterfall-connector"></div>
+                        <div class="waterfall-item" style="height: 30%;">
+                            <div class="waterfall-bar bar-negative">
+                                <span class="waterfall-value">-S/ 1,036,550</span>
+                            </div>
+                            <span class="waterfall-label">Gastos Operativos</span>
+                        </div>
+                        <div class="waterfall-connector"></div>
+                        <div class="waterfall-item" style="height: 9.1%;">
+                            <div class="waterfall-bar bar-profit">
+                                <span class="waterfall-value">S/ 314,420</span>
+                            </div>
+                            <span class="waterfall-label">Utilidad Neta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/reportes.js"></script>
+</body>
+</html>
