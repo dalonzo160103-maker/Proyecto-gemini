@@ -92,7 +92,7 @@
     },
     {
       "id": "antony-dev",
-      "name": "Anthony Vilcatoma",
+      "name": "",
       "role": "Software Developer",
       "specialization": "Digitalización y Automatización",
       "experience": "+2 años",
@@ -104,11 +104,11 @@
       ],
       "badge": "Tech Lead",
       "linkedin": "#",
-      "email": "antony@conta.capital"
+      "email": "@conta.capital"
     },
     {
       "id": "jamin-designer",
-      "name": "Jamin Aquino",
+      "name": "",
       "role": "Lead Designer",
       "specialization": "UX/UI y Brand Strategy",
       "experience": "+3 años",
@@ -120,7 +120,7 @@
       ],
       "badge": "Creative Director",
       "linkedin": "#",
-      "email": "jamin@conta.capital"
+      "email": "@conta.capital"
     }
   ],
   "metadata": {
