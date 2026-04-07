@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/Conta.capital.html" },
+    { "source": "/escuela", "destination": "/escuela.capital.html" }
+  ]
+}
